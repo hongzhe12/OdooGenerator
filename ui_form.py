@@ -93,16 +93,35 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.pushButton_2)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.verticalLayout_2.addItem(self.verticalSpacer)
-
 
         self.gridLayout_3.addLayout(self.verticalLayout_2, 0, 0, 1, 1)
 
         self.tabWidget.addTab(self.tab_2, "")
         self.tab_3 = QWidget()
         self.tab_3.setObjectName(u"tab_3")
+        self.gridLayout_4 = QGridLayout(self.tab_3)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.verticalLayout_3 = QVBoxLayout()
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_3.addItem(self.verticalSpacer)
+
+        self.lineEdit_5 = QLineEdit(self.tab_3)
+        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.lineEdit_5.setMinimumSize(QSize(421, 51))
+
+        self.verticalLayout_3.addWidget(self.lineEdit_5)
+
+        self.pushButton_3 = QPushButton(self.tab_3)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.pushButton_3.setMinimumSize(QSize(421, 51))
+
+        self.verticalLayout_3.addWidget(self.pushButton_3)
+
+
+        self.gridLayout_4.addLayout(self.verticalLayout_3, 0, 0, 1, 1)
+
         self.tabWidget.addTab(self.tab_3, "")
 
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
@@ -135,6 +154,8 @@ class Ui_MainWindow(object):
         self.lineEdit_4.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u8bf7\u8f93\u5165\u6a21\u578b\u540d", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u751f\u6210\u63a5\u53e3", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"controllers", None))
+        self.lineEdit_5.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u8bf7\u8f93\u5165\u6a21\u578b\u540d", None))
+        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"\u751f\u6210\u63a5\u53e3", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"access", None))
     # retranslateUi
 

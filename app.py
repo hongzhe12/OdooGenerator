@@ -5,6 +5,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QDialog, Q
 from ui_form import Ui_MainWindow
 from views import generate_view
 from controllers import generate_code
+from generate_access import g_access
 class MyMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -14,6 +15,7 @@ class MyMainWindow(QMainWindow):
         # 绑定信号槽
         self.ui.pushButton.clicked.connect(self.on_generate_view_clicked)
         self.ui.pushButton_2.clicked.connect(self.on_generate_controller_clicked)
+        self.ui.pushButton_3.clicked.connect(self.on_generate_access_clicked)
 
 
     # 生成视图按钮
@@ -73,7 +75,13 @@ class MyMainWindow(QMainWindow):
 
     # 生成权限配置
     def on_generate_access_clicked(self):
-        pass
+        # 获取textEdit_5中的文本
+        model_name = self.ui.lineEdit_5.text()
+        str_list = model_name.split()
+        text = g_access(str_list)
+        # 显示在子窗口中
+        self.show_text_dialog(text)
+
 
 
 

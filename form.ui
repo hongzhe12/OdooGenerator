@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -142,6 +142,17 @@
             </property>
            </widget>
           </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>access</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
            <spacer name="verticalSpacer">
             <property name="orientation">
@@ -155,14 +166,35 @@
             </property>
            </spacer>
           </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_5">
+            <property name="minimumSize">
+             <size>
+              <width>421</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="placeholderText">
+             <string>请输入模型名</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="minimumSize">
+             <size>
+              <width>421</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>生成接口</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
        </layout>
-      </widget>
-      <widget class="QWidget" name="tab_3">
-       <attribute name="title">
-        <string>access</string>
-       </attribute>
       </widget>
      </widget>
     </item>
