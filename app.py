@@ -4,7 +4,7 @@ from PySide6.QtGui import QGuiApplication
 from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QDialog, QVBoxLayout, QTextEdit, QPushButton
 from ui_form import Ui_MainWindow
 from views import generate_view
-
+from controllers import generate_code
 class MyMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -13,6 +13,7 @@ class MyMainWindow(QMainWindow):
 
         # 绑定信号槽
         self.ui.pushButton.clicked.connect(self.on_generate_view_clicked)
+        self.ui.pushButton_2.clicked.connect(self.on_generate_controller_clicked)
 
 
     # 生成视图按钮
@@ -57,6 +58,22 @@ class MyMainWindow(QMainWindow):
     def copy_to_clipboard(self, text):
         clipboard = QGuiApplication.clipboard()
         clipboard.setText(text)
+
+
+    # 生成控制层代码
+    def on_generate_controller_clicked(self):
+        # 获取textEdit_2中的文本
+        class_name = self.ui.lineEdit_3.text()
+        # 获取lineEdit_3中的文本
+        model_name = self.ui.lineEdit_4.text()
+        # 调用生成控制层函数
+        text = generate_code(class_name, model_name)
+        # 显示在子窗口中
+        self.show_text_dialog(text)
+
+    # 生成权限配置
+    def on_generate_access_clicked(self):
+        pass
 
 
 
