@@ -12,7 +12,7 @@ def generate_access_control(model_name):
 
 def g_access(model_name_lists:list):
     str_list = ["id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink"]
-    model_name_lists = ["operation.manual"]  # 这里可以添加更多的模型名
+    model_name_lists = [model_name_lists]  # 这里可以添加更多的模型名
     for i in model_name_lists:
         access_config = generate_access_control(i)
         str_list.append(access_config)
